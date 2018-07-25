@@ -1,0 +1,758 @@
+@import url("normalize.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+
+/*TYPE*/
+
+html {
+    font-size: 1em;
+}
+
+body {
+ 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+}
+
+section, footer {  
+    padding: 5vh 0;
+}
+
+p {margin-bottom: 1.3em;}
+
+h2, h3, h4 {
+  margin: 0;
+  line-height: 1.2;
+  user-select:none;  
+}
+
+h1 {
+  margin: 0;
+  margin-bottom:-0.25rem;
+  font-size: 2rem;
+}
+
+h2 {font-size: 4rem;
+    margin-bottom:1rem;
+}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 1rem;
+    text-transform:uppercase;
+    margin-bottom:1rem;
+}
+
+small, .font_small {font-size: 0.707em;
+text-transform:uppercase;}
+
+a {
+    text-decoration:none;
+    color: rgba(255,255,255,0.75);
+    cursor:pointer;
+    padding-bottom:2.5vh;   
+}
+
+a:hover {
+    border-bottom:2px lawngreen solid;
+}
+
+.shop-cart a i:hover {
+    transform: rotate(-90deg);
+    border:none;
+}
+
+.menu-toggle i:hover {
+    transform: rotate(90deg);
+}
+
+/*END TYPE*/
+
+.divider {
+    background-color:greenyellow;
+    height:5px;
+    width:25%;
+    margin:0.5rem 0;
+}
+
+img {
+    width:100%;
+}
+
+.logo img, .section-title img {
+    width:19px;
+}
+
+figure {
+    margin:0.5rem;
+}
+
+header, .organic-card, .organic-farmfood, .shop-now, .news {
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.content {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    align-items:end;
+    width:95%;
+    margin:0 auto;
+}
+
+.header-content {
+    grid-template-rows: 10vh 1fr;
+    height:100vh;
+}
+
+.logo {
+    grid-column:span 3;
+}
+
+.logo img {
+    position:relative;
+    top:1rem;
+    left:3.25rem;
+}
+
+.menu {
+    grid-column:span 7;
+    justify-self: end;
+}
+
+.shop-cart {
+    
+    justify-self:end;
+}
+
+.menu a {
+    text-transform:uppercase;
+    margin-left:0.5rem;
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);	
+}
+
+.menu-toggle {
+    justify-self:end;
+    
+}
+
+.site-title {
+    grid-column:span 11;
+    margin:0 auto;
+    text-align:center;
+    align-self:center;
+}
+
+.light {
+    font-weight:300;
+}
+
+.span-title {
+    font-weight:900;
+}
+
+.btn {
+    border-radius:1rem;
+    border:5px solid rgba(104,204,204,1);
+    padding:0.5rem 1rem;
+    background-color:rgba(255,255,255,0.75);
+    color:black;
+    font-weight:500;
+    margin:5vh 0;
+    cursor:pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.organic-content {
+    height:auto;
+}
+
+.organic-menu {
+    grid-column:span 12;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr) 2fr repeat(2,1fr);
+    align-self:start;
+    width:75%;
+    margin:0 auto;
+    margin-top:-15vh;
+    margin-bottom:5vh;
+}
+
+.btn {
+    color:rgba(0,0,0,0.75);
+    align-self:end;
+    padding:0.5rem 1rem;
+    margin:1rem 0.25rem;
+    border:2.5px solid rgba(0,0,0,0.25);
+    border-radius:5px;
+    text-align:center;
+}
+
+.btn:hover {
+    background-color:greenyellow;
+    border:2.5px solid greenyellow;
+    color:white;
+}
+
+.organic-slider, .slide {
+    grid-column:span 12;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    grid-gap:1rem;
+    width:95%;
+    margin:0 auto;
+
+}
+
+.organic-card {
+    height:20rem;
+    align-self:start;
+    text-align: center;
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    
+}
+
+.organic-card:hover {
+    opacity:0.9;
+}
+
+.organic-card i {
+    font-size:5rem;    
+}
+
+.price {
+    color:rgba(0,0,0,0.75);
+}
+
+.organic-farmfood-content {
+    height:auto;
+    grid-gap:1rem;
+}
+
+.section-title, .organic-farmfood-description {
+    grid-column:span 12;
+    align-self:start;
+    text-align:center;
+    margin:2.5vh 0;
+}
+
+.section-title img {
+    position:relative;
+    top:1rem;
+    left:0.85rem;
+}
+
+.organic-farmfood-card-container {
+    width:75%;
+    margin:0 auto;
+    grid-column:span 12;
+    display:grid;
+    grid-gap:1rem;
+    grid-template-columns:repeat(12,1fr);
+    height:auto;
+}
+
+.organic-farmfood-card {
+    grid-column:span 3;
+    min-height:30vh;
+    background-color:rgba(255,255,255,0.75);
+}
+
+.organic-farmfood-card:nth-child(2), .organic-farmfood-card:nth-child(3) {
+    align-self:start;
+}
+
+.organic-farmfood-card:nth-child(1), .organic-farmfood-card:nth-child(4) {
+    align-self:end;
+}
+
+.grape {
+    grid-column:span 12;
+    justify-self:center;
+    width:25%;
+    margin:0 auto;
+    
+}
+
+.grape img {
+    width:100%;
+}
+
+.round {
+    
+    width:10vw;
+    height:10vw;
+    border-radius:50%;
+    margin:1rem auto;
+}
+
+.organic-farmfood-card .round, .naturix-card .round, .fresh-cards{
+    background: linear-gradient(#e249d5, #e59195);
+}
+
+.organic-farmfood-card {
+    display:grid;
+    justify-items:center;
+    border-radius:0.5rem;
+    padding:0.5rem;
+}
+
+.organic-farmfood-card h4, .naturix-card h4, .taste-block-card-text h4 {
+    color:rgba(0,0,0,0.75);
+    text-align:center;
+}
+
+.taste-block-card-text h4 {
+    text-align:left;
+}
+
+.organic-farmfood-card p {
+    color:black;
+    font-family: "Helvectica",serif;
+    text-align:center;
+}
+
+.organic-farmfood-card button {
+    background-color:rgba(255,255,255,0.75);
+    color:rgba(0,0,0,0.5);
+    border:0;
+    width:auto;
+    margin:1rem auto;
+    cursor:pointer;
+    user-select:none;
+    padding:0.5rem 1rem;
+    text-transform:uppercase;
+}
+
+.organic-farmfood-card button:hover {
+    background-color:greenyellow;
+    color:white;
+}
+
+.products-card {
+    grid-column:span 2;
+    min-height:20rem;
+    background: linear-gradient(#e249d5, #e59195);
+    display:grid;
+    justify-items:center;
+}
+
+.products-content {
+    grid-gap:1rem;
+    align-items:center;
+    height: auto;
+}
+
+.products-description {
+    grid-column:span 6;
+    background-color:rgba(0,0,0,0.05);
+    color:rgba(0,0,0,0.75);
+    min-height:20rem;
+    padding:1rem;
+
+    display:grid;
+    align-items:stretch;
+}
+
+.products-description:nth-child(2) {
+    grid-column:1/7;
+}
+
+.products-card .round {
+    background-color:rgba(255,255,255,0.75);
+}
+
+.products-card small, .naturix-card small {
+    color:rgba(0,0,0,0.75);
+    font-weight:bold;
+}
+
+.naturix {
+    background: linear-gradient(#e249d5, #e59195);
+}
+
+.naturix-content {
+    grid-gap:1rem;
+    height:auto;
+    width:75%;
+    margin:0 auto;
+}
+
+.naturix-menu {
+    grid-column:span 12;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);    
+}
+
+.naturix-menu a{
+    grid-column:span 2;
+}
+
+.naturix-card {
+    grid-column:span 3;
+    min-height:20rem;
+    background: rgba(255,255,255,0.75);
+    display:grid;
+    justify-items:center;
+}
+
+.footer-content, .news-content, .review-content, .deal-content, .taste-content, .shop-now-content, .newsletter-content, .organic-farmfood-description, .fresh-cards-content {
+    width:75%;
+    margin:0 auto;
+}
+
+.deal-block {
+    grid-column:span 12;
+}
+
+.block-content {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:0.5rem;
+    align-items:center;
+    justify-items:center;
+}
+
+.block-content small, .block-content h3 {
+    grid-column:1;
+    justify-self:end;
+    text-align:right;
+}
+
+.deal-block h3, .deal-block p, .deal-block small {
+    color:rgba(0,0,0,0.75);
+}
+
+.deal-block img {
+    width:10rem;
+}
+
+.countdown-content {
+    color:rgba(0,0,0,0.5);
+    font-size:calc(1rem + 1.5vw);
+    font-size:"Helvectica",serif;
+    font-weight:bold;    
+}
+
+.countdown-content p {
+    padding:0.5rem 1rem;
+    border:5px solid yellowgreen;
+    border-image: linear-gradient(#e249d5, #e59195) 1;
+}
+
+#demo {
+    grid-column:span 12;
+    justify-self:center;
+}
+
+.fresh-cards-content {
+    grid-gap:1rem;
+}
+
+
+.fresh-cards-item {
+    grid-column:span 6;
+    color:rgba(0,0,0,0.75);
+    
+    padding:1rem;
+    margin:0 1rem;
+}
+
+.fresh-cards-item-content {
+    display:grid;
+    grid-template-columns:3rem 1fr 1fr;
+    grid-gap:0.5rem;
+    background-color:rgba(255,255,255,0.75);
+}
+
+.fresh-cards-item-content i {
+    margin:1rem 0.5rem;
+    font-size:2rem;
+    color:rgba(0,0,0,0.25);
+    align-self:center;    
+}
+
+.fresh-cards-item-content i:hover {
+    color:rgba(0,0,0,0.5);
+}
+
+.panel {
+    border-right:1px solid rgba(0,0,0,0.25);    
+}
+
+.fresh-cards-item-content-txt {
+    padding:1rem;
+}
+
+.fresh-cards-item-content-txt, .panel, .fresh-cards-item-content-img {
+    display:grid;
+    align-items:stretch;
+}
+
+.fresh-cards-item-content-img {   
+    grid-template-columns:1fr 1fr;
+    padding:1rem;   
+}
+
+.fresh-cards-preview {
+    grid-column:span 2;
+    background:rgba(0,0,0,0.05);
+}
+
+.fa-arrows-alt-v {
+    transform:rotate(45deg) translateX(0.5rem);
+    
+}
+
+.section-title h4 {
+    color:rgba(0,0,0,0.75);
+}
+
+.taste-block {
+    grid-column:span 4;
+    
+}
+
+.taste-block-card {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    margin:1rem 0;
+}
+
+.taste-block-card-img {
+    background-color:rgba(0,0,0,0.05);
+    min-height:5rem;
+}
+
+.taste-block-card-text {
+    padding:0 0.5rem;
+}
+
+.taste-content .section-title img{
+    width:25%;
+    top:0;
+}
+
+.shop-now-card {
+    grid-column:span 6;
+    padding:1rem;
+    display:grid;  
+}
+
+.shop-now-card small {
+    margin:1rem 0; 
+}
+
+.shop-now-card:last-child small:first-child{
+    margin:1rem 0;
+    text-align:right;
+}
+
+.handwritten {
+    font-family: 'Great Vibes', cursive;
+    font-size:2.5rem;
+}
+
+.shop-now-card-content {
+    border:5px solid rgba(255,255,255,0.75);
+    padding:1rem;
+    display:grid;
+    grid-template-rows:1fr 2rem;
+    align-items:center;
+}
+
+.shop-now-card-content .btn {
+    justify-self:start;
+    position:relative;
+    top:3.25rem;
+}
+
+.newsletter-title {
+    grid-column: span 6;
+    text-align:left; 
+    color:rgba(0,0,0,0.75); 
+}
+
+.newsletter-form {
+    grid-column: span 6;
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items: center;
+}
+
+input[type="email"] {
+    border:1px rgba(0,0,0,0.25) solid;
+    border-radius:1rem;
+    padding:0.5rem 1rem;
+}
+
+.review-block-content {
+    display:grid;
+    grid-template-columns:1fr 3fr;
+    color:rgba(0,0,0,0.75);
+}
+
+.userpic {
+    width:10vh;
+    height:10vh;
+    border-radius:50%;
+    border: 5px solid rgba(104,204,204,1);
+    align-self:center;
+    justify-self:center;
+}
+
+.news-block {
+    grid-column:span 6;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:1rem;
+    text-align:left;
+}
+
+.news-block-image {
+    background-color:rgba(0,0,0,0.25);
+}
+
+.news-block h4, footer h4 {
+    text-align:left;
+}
+
+footer {
+    padding:5vh 0;
+}
+
+.footer-content {
+    color:rgba(0,0,0,0.75);
+    align-items:start;   
+}
+    
+
+.footer-block:first-child, .footer-block:nth-child(4) {
+    grid-column:span 4;
+}
+
+.footer-block:nth-child(2), .footer-block:nth-child(3) {
+    grid-column:span 2;
+}
+
+ul {
+    padding:0;
+}
+ 
+
+ul li {
+    list-style: none;
+    margin:0;
+}
+
+.insta {
+    display:grid;
+    grid-gap:0.5rem;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+}
+
+.insta img {
+    width:15vh;
+    height:15vh;
+    justify-self:center;
+    filter: grayscale(20%);
+}
+
+footer a {
+    color:greenyellow;
+    font-weight:bold;
+    padding:0.25rem 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .organic-menu {
+        width:95%;
+        margin-top:-10vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width:95%;
+    }
+    
+    .badge {
+        grid-column:span 4;
+        grid-row:1;
+        width:50%;
+        margin:0 auto;
+    }
+
+    .organic-menu {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .organic-farmfood-card-container {
+        width:95%;
+    }
+
+
+    .organic-farmfood-card, .naturix-card {
+        grid-column:span 6;
+    }
+
+    .organic-menu {
+        margin-top:-15vh;
+    }
+
+    .products-card {
+        grid-column:span 4;
+    }
+
+    .products-card:nth-last-child(1), .products-card:nth-last-child(2), .products-card:nth-last-child(3) {
+        grid-row:3;
+    }
+
+    .products-description {
+        grid-column:span 12;
+    }
+
+    .menu a:first-child {
+        display:none;
+    }
+
+    .naturix-menu .btn {
+        grid-column:span 4;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .organic-menu .btn {
+        grid-column:span 2;
+    }
+
+    .logo {
+        grid-column:span 4;
+    }
+
+    .menu {
+        grid-column:span 6;
+    }
+
+    .menu a:nth-child(4) {
+        display:none;
+    }
+
+    .block-content h3, .block-content small, .block-content p {
+        grid-column:2/4;
+        justify-self:start;
+        text-align: left;
+    }
+
+    .deal-block img {
+        grid-row:1/4;
+    }
+}
+
